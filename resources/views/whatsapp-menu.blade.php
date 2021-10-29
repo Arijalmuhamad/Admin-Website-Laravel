@@ -82,16 +82,15 @@
                     <input type="input" class="form-control" id="" placeholder="URL API">
                   </div>
 
-                <div class="footer">
-                  <p>
-                    <button type="submit" class="btn btn-dark">Generate New API</button>
-                  </p>
-                  <p>
-                    <button type="submit" class="btn btn-info">Logout Whatsapp</button>
-                  </p>
-                </div>
+                    <div class="footer">
+                        <p>
+                          <button type="submit" class="btn btn-dark">Generate New API</button>
+                        </p>
+                        <p>
+                          <button type="submit" class="btn btn-info">Logout Whatsapp</button>
+                        </p>
+                    </div>
               </form>
-
             </div>
           </div>
         </div>

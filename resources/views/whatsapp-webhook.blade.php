@@ -36,11 +36,6 @@
           
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
-          
-          
-        </div>
-        <!-- /.card-footer -->
       </form>
     </div>
   </div>

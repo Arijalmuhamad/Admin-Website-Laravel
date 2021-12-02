@@ -39,7 +39,7 @@
 
           {{-- dashboard --}}
           <li class="nav-item">
-            <a class="nav-link {{ $title === "Dashboard" ? 'active' : '' }}" href="/">
+            <a class="nav-link {{ $title === "Dashboard" ? 'active' : '' }}" href="/dashboard">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -58,7 +58,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a class="nav-link {{ $title === "Send Message" ? 'active' : '' }}" href="/send_message">
+                <a class="nav-link {{ $title === "Send Message" ? 'active' : '' }}" href="/send-message">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Send Message</p>
                 </a>
@@ -70,7 +70,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ $title === "Menu Whatsapp" ? 'active' : '' }}" href="/whatsapp_menu">
+                <a class="nav-link {{ $title === "Menu Whatsapp" ? 'active' : '' }}" href="/whatsapp-menu">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Whatsapp</p>
                 </a>
@@ -114,6 +114,16 @@
               <i class="nav-icon fas fa-code"></i>
               <p>
                 Rest API
+              </p>
+            </a>
+          </li>
+
+           {{-- sign out --}}
+           <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="nav-icon fas fa-sign-out-alt"></i>            
+              <p>
+                Sign Out
               </p>
             </a>
           </li>

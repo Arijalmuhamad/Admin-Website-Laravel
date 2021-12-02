@@ -37,3 +37,9 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 5. Masuk ke directory c:xampp/htdocs/(nama file)
 6. Jalankan php artisan serve
 7. Copy http://127.0.0.1:8000/ dan jalankan di browser
+
+## Develop Application
+1. Menambahkan halaman login (frontend)
+2. Menambahkan halaman Register (frontend)
+3. Menambahkan halaman Forgot Password (fortend)
+4. Menambahkan Icon logout pada sidebar

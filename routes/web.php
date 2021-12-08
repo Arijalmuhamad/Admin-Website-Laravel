@@ -17,7 +17,24 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+
+
+
+
+
+
+Route::get('dashboard', [DashboardController::class, 'index']);
+
+// wpu login
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
+
+
+
+
 
 Route::get('/broadcast', [BroadcastController::class, 'index']);
 //  menu auto replay
@@ -31,8 +48,6 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
 // route halaman lupa password
 Route::get('/forgot-password', [ForgotpasswordController::class, 'index']);
-
-
 
 
 

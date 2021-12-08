@@ -38,6 +38,7 @@
   <img class="animation__shake" src="{{ asset ('') }}assets/dist/img/whatsapp.png" alt="AdminLTELogo" height="60" width="60">
 </div>
 
+
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-success">
@@ -47,19 +48,48 @@
     </a>
     </div>
     <div class="card-body">
+
+      @if (session()->has('success'))
+          
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{ session('success') }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      @endif
+
+      @if (session()->has('loginError'))
+          
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session('loginError') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    @endif
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="../../index3.html" method="post">
+      <form method="post" action="/login">
+        @csrf
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" name="email" class="form-control" @error('email') is-invalid @enderror id="email" placeholder="Email" autofocus required value="{{ old('email') }}">
+        
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
+          @error('email')
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
+          @enderror
+
         </div>
+
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -76,18 +106,12 @@
             </div>
           </div>
        
-          <!-- /.col -->
         </div>
+        <button class="btn btn-block btn-success" type="submit">Login</button>
       </form>
 
-      <div class="social-auth-links text-center mt-2 mb-3">
-        <a href="/dashboard" class="btn btn-block btn-success">
-          <i class="fab mr-2"></i> login
-        </a>
-        
-      </div>
+      <br>
       <!-- /.social-auth-links -->
-
       <p class="mb-1">
         <a href="/forgot-password">I forgot my password</a>
       </p>

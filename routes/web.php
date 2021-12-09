@@ -26,18 +26,18 @@ use Illuminate\Support\Facades\Route;
 
 
 // login
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/contact', [ContactController::class, 'index']);
-Route::get('/broadcast', [BroadcastController::class, 'index']);
-Route::get('/replay', [AutoreplayController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/contact', [ContactController::class, 'index'])->middleware('auth');
+Route::get('/broadcast', [BroadcastController::class, 'index'])->middleware('auth');
+Route::get('/replay', [AutoreplayController::class, 'index'])->middleware('auth');
 
 
 

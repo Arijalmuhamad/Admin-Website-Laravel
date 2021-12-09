@@ -14,14 +14,14 @@
         <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="/contact" class="nav-link">Contact</a>
       </li>
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
         </a>
@@ -40,7 +40,7 @@
             </div>
           </form>
         </div>
-      </li>
+      </li> --}}
 
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
@@ -127,16 +127,33 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
+
+      {{-- auth --}}
+      @auth   
+        <li class="nav-item dropdown">
+          <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Welcome back, {{ auth()->user()->name }}</a>
+          <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+            <li><a href="/dashboard" class="dropdown-item"><i class="nav-icon fas fa-tachometer-alt"></i> My Dashboard</a></li>
+            <li class="dropdown-divider"></li>
+            
+            <li>
+              <form action="/logout" method="post">
+                @csrf
+                <button type="submit" class="dropdown-item"><i class="nav-icon fas fa-sign-out-alt"></i> Logout</button>
+              </form>
+            
+            </li>
+          </ul>
+        </li>
+      @endauth
+
+
+     
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>
   <!-- /.navbar -->

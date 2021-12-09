@@ -20,54 +20,72 @@
 
 @section('container')
     <!-- Small boxes (Stat box) -->
-  <div class="container">
-    
-      <div class="row">
-          <div class="col-lg-4 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
-    
-                <p>Total Nomor</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-ipad"></i>
-              </div>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-4 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53<sup style="font-size: 20px"></sup></h3>
-    
-                <p>Whatsapp Terkirim</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-paper-airplane"></i>
-              </div>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-4 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>44</h3>
-    
-                <p>Delay Pengiriman</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-load-d"></i>
-              </div>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Data Dashboard</h3>
+          <div class="card-tools">
             
-            </div>
           </div>
         </div>
+
+        <div class="card-body">
+              <div class="row">
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-info">
+                    <div class="inner">
+                      <h3>150</h3>
+          
+                      <p>Total Nomor</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-ipad"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-success">
+                    <div class="inner">
+                      <h3>53<sup style="font-size: 20px"></sup></h3>
+          
+                      <p>Whatsapp Terkirim</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-paper-airplane"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-warning">
+                    <div class="inner">
+                      <h3>44</h3>
+          
+                      <p>Delay Pengiriman</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-load-d"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        
+      </div>
+    </div>
+    
+      
      
-   </div>
+    
+
+  
+
+
     
 
       @endsection

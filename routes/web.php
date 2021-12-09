@@ -23,35 +23,27 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('dashboard', [DashboardController::class, 'index']);
 
-// wpu login
+
+// login
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
-
-
-
-
-Route::get('/broadcast', [BroadcastController::class, 'index']);
-//  menu auto replay
-Route::get('/replay', [AutoreplayController::class, 'index']);
-// menu contact
+Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
-
-// route halaman login
-Route::get('/login', [LoginController::class, 'index']);
-// route halaman register
-Route::get('/register', [RegisterController::class, 'index']);
-// route halaman lupa password
-Route::get('/forgot-password', [ForgotpasswordController::class, 'index']);
+Route::get('/broadcast', [BroadcastController::class, 'index']);
+Route::get('/replay', [AutoreplayController::class, 'index']);
 
 
 
-//route halaman kirim pesan whatsapp
+
+
+//route halaman kirim pesan whatsapp->blm dibuat controller nya
 Route::get('/send-message', function () {
     return view('whatsapp-send', [
         'title' => 'Send Message'

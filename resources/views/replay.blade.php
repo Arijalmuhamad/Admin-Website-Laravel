@@ -47,6 +47,7 @@
 						<th width="5%" class="text-center">Response</th>
 						<th width="1%" class="text-center">Case Sensitive</th>
             <th width="1%" class="text-center">Action</th>
+            
           </tr>
         </thead>
         <tbody>

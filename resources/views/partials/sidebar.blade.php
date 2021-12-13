@@ -13,9 +13,11 @@
         <div class="image">
           <img src="{{ asset ('') }}assets/dist/img/user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
+        @auth
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a class="d-block {{ $title === "Profile" ? 'active' : '' }}" href="/profile"> {{ auth()->user()->name }}</a>
         </div>
+        @endauth
       </div>
 
       <!-- SidebarSearch Form -->
@@ -118,7 +120,7 @@
             </a>
           </li>
 
-           {{-- sign out --}}
+           {{-- sign out
            <li class="nav-item">
             <a class="nav-link" href="/">
               <i class="nav-icon fas fa-sign-out-alt"></i>            
@@ -127,7 +129,7 @@
               </p>
             </a>
           </li>
-  
+   --}}
 
           
         </ul>

@@ -47,14 +47,15 @@
         <thead>
           <tr>
             <th width="1%" class="text-center">No</th>
-						<th width="5%" class="text-center">Nomor</th>
-						<th width="5%" class="text-center">Pesan</th>
+						<th width="1%" class="text-center">Nomor</th>
+						<th width="1%" class="text-center">Pesan</th>
             <th width="1%" class="text-center">Media</th>
             <th width="1%" class="text-center">Tanggal</th>
             <th width="1%" class="text-center">Status</th>
             <th width="1%" class="text-center">Action</th>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <td class="text-center">1.</td>
@@ -67,6 +68,8 @@
           </tr>
         </tbody>
       </table>
+
+
     </div>
     <!-- /.card-body -->
     <div class="card-footer clearfix">
@@ -77,7 +80,9 @@
         <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
       </ul>
+    
     </div>
+
   </div>
 </div>
 @endsection

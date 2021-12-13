@@ -1,5 +1,4 @@
 @extends('layouts.master')
-
 @section('content-header')
 
       <div class="container-fluid">
